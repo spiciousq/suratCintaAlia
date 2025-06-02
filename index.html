@@ -1,0 +1,77 @@
+<div class="letter-box">
+  <div id="letter-content">
+    <!-- Content will be injected here -->
+  </div>
+  <button onclick="nextSection()">Next</button>
+  <button onclick="playSound()">🔊 Play Sound</button>
+</div>
+
+<audio id="sound" src="https://delta.123tokyo.xyz/get.php/d/32/idWs2JEFSFI.mp3?n=THE%20TRUTH%20%28NAUFAL%20ISA%20%26%20IRWAN%20FARIZ%29%20-%20INFINITI%20%28Official%20Animated%20Video%29&uT=R&uN=ZHVieWE%3D&h=S5Bm4Y6iOOca82rI_E8i4A&s=1748718648&uT=R&uN=ZHVieWE%3D"></audio>
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f7f7f7;
+    padding: 30px;
+    color: #333;
+  }
+
+  .letter-box {
+    background: pink;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    background-color: #4CAF50;
+    color: pink;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+
+<script>
+  const sections = [
+    "Hi awak, Assalamualaikum!<br><br>Hari ni kita mulakan dengan pantun sikit. Ehemm 🎤<br><br><em>Bukan mudah menjala ikan,<br>Menjala ikan tahan bersusah,<br>Bukan mudah menjaga iman,<br>Menjaga iman perlukan ibadah.</em><br><br>Apa khabar iman awak hari ni? 😊",
+    "Sempena bulan Zulhijjah ni, akak nak ajak awak sama-sama kita refleksi kisah hebat Siti Hajar",
+    "Siti Hajar merupakan isteri kepada Nabi Ibrahim A.S dan ibu kepada Nabi Ismail A.S. Setelah melahirkan Nabi Ismail, Allah memerintahkan Nabi Ibrahim untuk meninggalkan Siti Hajar dan bayinya di sebuah kawasan padang pasir yang tandus dan kering iaitu di lembah Makkah. Di situ tiada manusia, tiada tumbuhan, dan tiada sumber air.",
+    "Siti Hajar, walaupun kehairanan dan berat hati, tetap taat kepada perintah Allah. Setelah Nabi Ibrahim meninggalkan mereka, bekalan air dan makanan pun habis. Demi mencari air untuk Nabi Ismail yang menangis kehausan, Siti Hajar berulang-alik antara dua bukit iaitu Safa dan Marwah sebanyak tujuh kali, dengan harapan dapat menemukan sebarang sumber air atau bantuan.",
+    "Namun, usahanya seolah-olah sia-sia. Tetapi kerana keteguhan hati dan kesungguhan beliau dalam berusaha, akhirnya dengan izin Allah, munculnya mata air di bawah kaki Nabi Ismail yang sedang menangis dan menghentakkan kakinya. Air itu dikenali hingga ke hari ini sebagai air Zamzam, air yang tidak pernah kering dan penuh keberkatan.",
+    "Apa reflection awak dlm kisah ni, cuba share sikit dgn akak 🥰",
+    "Kalau reflection akak, bila Allah berkehendak, maka ‘kun fayakun’ – jadilah ia. Tapi dalam banyak hal, Allah mahu melihat dahulu sejauh mana usaha kita dalam mendapatkan sesuatu.", 
+    "Contohnya, kalau kita ingin berjaya dalam peperiksaan, kita perlu berusaha dan belajar bersungguh-sungguh. Kalau kita mahu berubah menjadi lebih baik, kita perlu mencari persekitaran (circle) yang positif dan menyokong. Berubah sorang-sorang memang susah, tapi bila ada kawan yang sama matlamat, jalan jadi lebih mudah dan hati lebih kuat." , 
+"Ambillah semangat dan kecekalan Siti Hajar sebagai inspirasi dalam penghijrahan hidup kita – walau dalam keadaan lemah selepas bersalin, beliau tetap berusaha tanpa henti. Usaha itulah yang akhirnya membuka jalan kepada rahmat Allah berupa air Zamzam yang penuh keberkatan.",
+    "Moga kita mencontohi semangat beliau dalam usaha kita menjadi insan yang lebih baik, lebih sabar, dan lebih yakin pada pertolongan Allah 💚", 
+   
+  ];
+  let currentSection = 0;
+
+  function nextSection() {
+    if (currentSection < sections.length) {
+      document.getElementById("letter-content").innerHTML = sections[currentSection];
+      currentSection++;
+    } else {
+      document.getElementById("letter-content").innerHTML = "<strong>Terima kasih kerana membaca 💌</strong>";
+    }
+  }
+
+  function playSound() {
+    document.getElementById("sound").play();
+    }
+
+    // Show the first section when the page loads
+    nextSection();
+  </script>
+</body>
+</html>
